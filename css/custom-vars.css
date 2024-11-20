@@ -1,0 +1,7 @@
+:root {
+    --theme-color: #ffcc00;
+    --text-on-theme-color: var(--bs-body-color);
+    --accent-color: #155e75;
+    --text-on-accent-color: #ffffff;
+    --accent-color-light: #0e7490;
+}
