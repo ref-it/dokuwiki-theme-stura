@@ -1,0 +1,813 @@
+html {
+    font-size: 18px;
+}
+
+html, body {
+    background: #f8f8f8 !important;
+}
+
+body {
+    font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Cantarell, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    border-top: 3px solid var(--theme-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 1.75rem;
+}
+
+p, li, table {
+    line-height: 1.6em;
+}
+
+li {
+    margin-bottom: 0.25em;
+}
+
+/* pre, code, samp, kbd {
+    font-size: .85rem;
+} */
+
+abbr[title] {
+    text-decoration: none;
+}
+
+#dokuwiki__header .logo span {
+    padding-top: 6px;
+}
+
+#dokuwiki__site > .site {
+  padding-right: 45px;
+  padding-left: 45px;
+}
+
+@media screen and (max-width: 480px) {
+    #dokuwiki__site > .site {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.dokuwiki div.page,
+.dokuwiki .pageId span,
+#dokuwiki__aside > .pad {
+    box-shadow: none;
+    border-color: #dfdfdf;
+}
+
+.dokuwiki .pageId span {
+    display: none;
+    border-radius: .375rem .375rem 0 0 !important;
+    background-color: #f0f0f0 !important;
+    border: 1px solid #dfdfdf;
+    position: relative;
+}
+
+.dokuwiki div.page {
+    padding: 1.25rem 1.5rem .5rem 1.5rem;
+    border-radius: .375rem .375rem 0 0;
+/*    border-radius: .375rem 0 0 0;*/
+    border-color: #dfdfdf;
+    margin-bottom: 0;
+    min-height: auto !important;
+}
+
+#dokuwiki__header h1 span {
+    padding-top: 7px;
+}
+
+.dokuwiki h3.toggle {
+    padding: 1.25rem 1rem .5rem 1rem;
+}
+
+#dw__toc {
+    border-bottom: 1px solid #dfdfdf;
+    border-radius: 0 0 0 .375rem;
+    display: none;
+}
+
+input {
+    border-radius: .375rem;
+    padding: .25rem .5rem !important;
+    transition: all .2s ease;
+    font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Cantarell, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 100%;
+    color: #222;
+    outline: 0;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+.dokuwiki label span {
+    margin-right: .5rem;
+}
+
+.dokuwiki fieldset {
+    border-radius: .375rem;
+    margin-bottom: 1.5rem;
+}
+
+#config__manager fieldset,
+#config__manager fieldset tr:hover td {
+    background-color: transparent;
+}
+
+#plugin__upgrade_meter ol li .step {
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+#dokuwiki__pagetools div.tools ul li a svg {
+    fill: var(--accent-color) !important;
+}
+
+.grid-50-50 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+    width: calc(100% - 1rem);
+    margin-bottom: 1.5rem;
+}
+
+.alert {
+    background: #f8f8f8;
+    border: 1px solid #dfdfdf;
+    border-radius: .375rem;
+    color: #333;
+}
+
+
+.alert-warning {
+    background: var(--theme-color);
+    border-color: rgba(0,0,0,.2);
+}
+
+.alert-danger {
+    background: #e15852;
+    border-color: #df4e48;
+    color: #000000 !important;
+}
+
+.alert-success {
+    background: #6fd06b;
+    border-color: #5fc05b;
+}
+
+.alert-danger a {
+    font-weight: 700;
+    color: #000000;
+}
+
+.alert h3, .alert h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0 !important;
+}
+
+.dokuwiki .docInfo {
+    background: #f0f0f0;
+    padding: .25rem .5rem;
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    border-radius: 0 0 .375rem .375rem;
+}
+
+.badge {
+    background-color: #f0f0f0;
+    padding: .2rem .4rem;
+    margin-right: .5rem;
+    border-radius: .25rem;
+    border: 1px solid #dfdfdf;
+}
+
+/*.accordion {
+    --bs-accordion-border-radius: 0.25rem;
+    --bs-accordion-inner-border-radius: calc(0.25rem - 1px);
+    --bs-accordion-active-color: var(--theme-color);
+}
+
+.dokuwiki .aside .accordion {
+    margin-top: -.1rem;
+}
+
+.dokuwiki .aside .accordion-button {
+    padding: .6rem .75rem;
+    background: #f0f0f0;
+    box-shadow: none;
+    font-size: inherit;
+}
+
+.dokuwiki .aside .accordion-body {
+    padding: 0;
+}
+
+.dokuwiki .aside ul {
+    margin: -.61rem 0 !important;
+    padding: 0 !important;
+    position: relative;
+    z-index: 10;
+}
+
+.dokuwiki .aside ul ul {
+    margin: 0 !important;
+}
+
+.dokuwiki .aside li {
+    list-style-type: none;
+    margin: 0;
+}
+
+.dokuwiki .aside li a {
+    display: block;
+    padding: .6em .75em;
+    background: #fff !important;
+    transition: .4s ease;
+    border: none;
+    border-top: 1px solid #dfdfdf;
+    text-decoration: none;
+    color: #333 !important;
+}
+
+.dokuwiki .aside li a:hover,
+.dokuwiki .aside li a:focus,
+.dokuwiki .aside li a:active {
+    background: #f8f8f8 !important;
+}
+
+.dokuwiki .aside li li a {
+    padding-left: 1.75rem;
+    background: #ffffff !important;
+}
+
+.dokuwiki .aside li li li a {
+    padding-left: 2.25em;
+}
+
+.dokuwiki .aside span.curid a:after {
+    margin-right: -10px;
+    background: var(--theme-color);
+    height: 24px;
+    width: 6px;
+    border-top-left-radius: 6px 50%;
+    border-bottom-left-radius: 6px 50%;
+    content: '';
+    float: right;
+    margin-top: -2px;
+}*/
+
+.dokuwiki .tabs > ul li a, .dokuwiki ul.tabs li strong, .dokuwiki ul.tabs li a {
+    margin: 0 .3rem 0 0;
+    border: 1px solid #dfdfdf;
+    border-radius: .25em .25em 0 0;
+}
+
+.dokuwiki .plugin_tabbox.js ul.tabs li.active a {
+    background-color: #f8f8f8;
+    border-bottom-color: #f8f8f8;
+}
+
+.dokuwiki .plugin_tabbox.js ul.tabs li a {
+    font-weight: bold !important;
+}
+
+.dokuwiki .plugin_tabbox.js div.tabboxtab {
+    background-color: #f8f8f8;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.dokuwiki .tabs > ul::after, .dokuwiki ul.tabs::after {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.tabboxtab > ul {
+    margin-left: -1rem;
+}
+
+.bs-wrap-button a {
+    display: inline-block;
+    color: var(--text-on-accent-color) !important;
+    font-weight: 400 !important;
+    background-color: var(--accent-color) !important;
+    padding: 0.45em 0.75em 0.55em 0.75em;
+    margin: 0 0.75em 0.75em 0;
+    border-radius: .375rem;
+    border: 1px solid rgba(0,0,0,.1);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    line-height: 1.3em;
+}
+
+.bs-wrap-button a:hover,
+.bs-wrap-button a:focus,
+.bs-wrap-button a:active {
+    text-decoration: none !important;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: var(--accent-color-light) !important;
+    color: var(--text-on-accent-color) !important;
+    border-color: rgba(0,0,0,.2);
+}
+
+.bs-wrap-button a::before {
+    content: "\f101";
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    color: var(--text-on-accent-color);
+    margin-right: .5rem;
+}
+
+.bs-wrap-button a[href^="http://"]::before,
+.bs-wrap-button a[href^="https://"]::before {
+    content: "\f35d";
+    position: relative;
+    top: 1px;
+}
+
+.dokuwiki div.wrap_round {
+    border-radius: .375rem;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.admin_tasks a,
+.admin_plugins a {
+    border: 1px solid #dfdfdf;
+    border-radius: .375rem;
+    padding: .25rem 0 0 0;
+}
+
+.admin_tasks a:hover,
+.admin_tasks a:focus,
+.admin_tasks a:active,
+.admin_plugins a:hover,
+.admin_plugins a:focus,
+.admin_plugins a:active {
+    background-color: #f8f8f8;
+    border: 1px solid #dfdfdf;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none !important;
+    outline: none;
+    color: #27272a;
+    font-weight: bold;
+    border-bottom: 2px dotted var(--accent-color);
+}
+
+a:hover,
+a:focus,
+a:active {
+    border-bottom: 2px solid var(--accent-color);
+    cursor: pointer;
+}
+
+table td,
+table th,
+table td:hover,
+table th:hover {
+    padding: .25rem .5rem;
+    border: 1px solid #dfdfdf !important;
+    vertical-align: middle;
+    background-color: #fdfdfd !important;
+}
+
+table tr:nth-child(2n+1) td,
+table tr:nth-child(2n+1) td:hover {
+    background: #f8f8f8 !important;
+}
+
+table th,
+table th:hover {
+    background-color: #f8f8f8 !important;
+    font-weight: 700;
+}
+
+table thead th,
+table thead th:hover {
+    background-color: #f0f0f0 !important;
+}
+
+table th[colspan],
+table th[colspan]:hover {
+    text-align: center;
+    background-color: var(--accent-color) !important;
+    border-top-color: var(--accent-color) !important;
+    border-right-color: var(--accent-color) !important;
+    border-left-color: var(--accent-color) !important;
+    color: var(--text-on-accent-color) !important;
+}
+
+figure {
+    background-color: #f8f8f8;
+    border: 1px solid #dfdfdf;
+    border-radius: .375rem;
+}
+
+figure img {
+    margin: 0 !important;
+    border-radius: .375rem .375rem 0 0;
+}
+
+figure .caption {
+    clear: both;
+    padding: .75rem;
+    border-top: 1px solid var(--theme-color);
+}
+
+.dokuwiki div.plugin_translation {
+    clear: both;
+}
+
+.dokuwiki div.plugin_translation ul li {
+    margin: 0 0 .5rem .5rem;
+}
+
+.dokuwiki div.plugin_translation ul li a:link,
+.dokuwiki div.plugin_translation ul li a:hover,
+.dokuwiki div.plugin_translation ul li a:active,
+.dokuwiki div.plugin_translation ul li a:visited,
+.dokuwiki div.plugin_translation ul li span {
+    padding: .25rem .5rem;
+    border-radius: .375rem;
+    background-color: transparent;
+    color: var(--bs-body-color);
+    border: 1px solid rgba(0,0,0,.1);
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.dokuwiki div.plugin_translation ul li span {
+    background-color: var(--accent-color);
+    border-radius: .375rem;
+    color: var(--text-on-accent-color);
+}
+
+.breadcrumbs {
+    display: none;
+    border-color: rgba(255,255,255,.1) !important;
+}
+
+.dokuwiki div.breadcrumbs div:first-child,
+.dokuwiki div.breadcrumbs div:last-child {
+    border: none;
+}
+
+.pad-iframecontainer {
+    margin-bottom: 1.8rem;
+}
+
+#dokuwiki__footer .pad {
+    display: none;
+}
+
+.docnavbar {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1.25rem;
+    margin-top: -1.25rem;
+    background: #f0f0f0;
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+    border-bottom: 1px solid #dfdfdf !important;
+}
+
+.docnavbar.showtoc {
+    margin-bottom: -.5rem !important;
+}
+
+#dokuwiki__aside > .pad {
+    background: transparent;
+}
+
+#dw__login fieldset {
+    width: 420px !important;
+}
+
+legend {
+    float: none;
+    width: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 .25rem;
+}
+
+.plugin_oauth_keycloak {
+    padding: .5rem 1rem !important;
+    border-radius: .375rem;
+    border-color: rgba(255,255,255,.1) !important;
+}
+
+.admin_tasks {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .dokuwiki h3.toggle {
+        padding: .25rem !important;
+    }
+
+    .grid-50-50 {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .grid-50-50 .box {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #18181b;
+        --bg-color-accent: #27272a;
+    }
+
+    body, html {
+        background: var(--bg-color) !important;
+        color: #fff !important;
+    }
+
+    .dokuwiki fieldset {
+        border-color: rgba(255,255,255,.1);
+    }
+
+    #dokuwiki__header h1 a,
+    li, li .li,
+    a, a:hover, a:focus, a:active {
+        color: #fff !important;
+    }
+
+    .page,
+    #dokuwiki__aside > .pad {
+        background: var(--bg-color) !important;
+        border-color: var(--bg-color-accent) !important;
+    }
+
+    .docInfo, .dokuwiki .pageId span {
+        background: var(--bg-color-accent) !important;
+        background-color: var(--bg-color-accent) !important;
+        border-color: var(--bg-color-accent) !important;
+    }
+
+    .dokuwiki .wrap_box,
+    #dw__toc {
+        background: var(--bg-color-accent) !important;
+        color: #fff !important;
+        border-color: rgba(255,255,255,.1) !important;
+    }
+
+    .plugin_wrap,
+    .wrap_info p,
+    .wrap_important p,
+    .wrap_alert p,
+    .wrap_tip p,
+    .wrap_help p,
+    .wrap_todo p,
+    .wrap_download p,
+    .wrap_caution p {
+        color: #333333 !important;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        color: #ffffff !important;
+    }
+
+    hr {
+        border-color: rgba(255,255,255,.5);
+    }
+
+    pre, code,
+    #confmanager div.level1,
+    #confmanager .formControl {
+        background-color: var(--bg-color-accent);
+        color: #ffffff;
+        box-shadow: none;
+        border-color: rgba(255,255,255,.1);
+    }
+
+    input {
+        background: var(--bg-color);
+        color: #fff;
+        border-color: rgba(255,255,255,.1);
+    }
+
+    .dokuwiki div.section_highlight {
+        border-color: #3f3f46;
+    }
+    
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"],
+    input.button,
+    a.button,
+    button,
+    .qq-upload-button {
+        background: #27272a !important;
+        color: #ffffff !important;
+        border-color: rgba(255,255,255,.1);
+    }
+    
+    input[type="submit"]:hover,
+    input[type="submit"]:active,
+    input[type="submit"]:focus,
+    input[type="button"]:hover,
+    input[type="button"]:active,
+    input[type="button"]:hover,
+    input[type="reset"]:hover,
+    input[type="reset"]:active,
+    input[type="reset"]:hover,
+    input.button:hover,
+    input.button:active,
+    input.button:focus,
+    a.button:hover,
+    a.button:active,
+    a.button:focus,
+    button:hover,
+    button:active,
+    button:focus,
+    .qq-upload-button:hover {
+        background: #3f3f46 !important;
+    }
+
+     input, textarea, button, select, optgroup, option, keygen, output, meter, progress,
+    .dokuwiki textarea.edit {
+        background: #18181b;
+        color: #ffffff;
+        border-color: rgba(255,255,255,.1);
+    }
+
+    #dokuwiki__pagetools div.tools ul li a svg {
+        fill: #cccccc !important;
+    }
+
+    .dokuwiki form.changes li .sizechange {
+        color: #333333;
+    }
+
+    table thead th, table thead th:hover {
+        background-color: #1b1b1b !important;
+    }
+
+    table tr:nth-child(2n+1) td, table tr:nth-child(2n+1) td:hover {
+        background: var(--bg-color-accent) !important;
+    }
+
+    table td, table th, table td:hover, table th:hover {
+        background-color: var(--bg-color) !important;
+        border-color: rgba(255,255,255,.1) !important;
+        color: #fff !important;
+    }
+
+    table th[colspan], table th[colspan]:hover  {
+        color: var(--text-on-accent-color) !important;
+    }
+
+    #dokuwiki__pagetools:hover div.tools ul, #dokuwiki__pagetools:focus-within div.tools ul {
+        background-color: var(--bg-color-accent) !important;
+        border-color: rgba(255,255,255,.1) !important;
+        box-shadow: 2px 2px 2px rgba(255,255,255,.05) !important;
+    }
+
+    #dokuwiki__pagetools div.tools ul li a:active, #dokuwiki__pagetools div.tools ul li a:focus, #dokuwiki__pagetools div.tools ul li a:hover {
+        background-color: var(--bg-color) !important;
+    }
+    
+    .dokuwiki .plugin_tabbox.js div.tabboxtab, .panelHeader {
+        background-color: var(--bg-color-accent) !important;
+        border-left: 1px solid rgba(255,255,255,.15);
+        border-right: 1px solid rgba(255,255,255,.15);
+        border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+    
+    .dokuwiki .tabs > ul li a, .dokuwiki ul.tabs li strong, .dokuwiki ul.tabs li a {
+        border: 1px solid #4a4a4a;
+        background-color: #4a4a4a;
+        color: #ccc;
+    }
+    
+    .dokuwiki .tabs > ul li a:hover, .dokuwiki ul.tabs li strong:hover, .dokuwiki ul.tabs li a:hover {
+        background-color: var(--bg-color-accent);
+        color: #fff;
+    }
+    
+    .dokuwiki .plugin_tabbox.js ul.tabs li.active a,
+    #extension__manager ul.tabs li.active a {
+        background-color: var(--bg-color-accent);
+        border-bottom-color: var(--bg-color-accent);
+        color: #fff
+    }
+    
+    .dokuwiki .tabs > ul::after, .dokuwiki ul.tabs::after {
+        border-bottom: 1px solid #4a4a4a;
+    }
+
+    .bs-wrap-button a {
+        text-shadow: none;
+        border-color: rgba(255,255,255,.1);
+    }
+
+    figure {
+        background-color: var(--bg-color-accent);
+        border-color: rgba(255,255,255,.1);
+    }
+
+    .docnavbar {
+        background: var(--bg-color-accent);
+        border-color: rgba(255,255,255,.1) !important;
+    }
+
+    .alert-warning a.wikilink1 {
+        color: var(--bs-body-color);
+        font-weight: bold;
+    }
+
+    .dokuwiki div.plugin_translation ul li a:link,
+    .dokuwiki div.plugin_translation ul li a:hover,
+    .dokuwiki div.plugin_translation ul li a:active,
+    .dokuwiki div.plugin_translation ul li a:visited,
+    .dokuwiki div.plugin_translation ul li span {
+        background-color: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .dokuwiki div.plugin_translation ul li span {
+        background-color: var(--accent-color);
+        color: var(--text-on-accent-color);
+    }
+
+    #acl__detail div#acl__user {
+        border-color: rgba(255,255,255,.1);
+    }
+
+    .admin_tasks a, .admin_plugins a {
+        border-color: rgba(255,255,255,.1) !important;
+    }
+
+    .admin_tasks a:hover,
+    .admin_tasks a:focus,
+    .admin_tasks a:active,
+    .admin_plugins a:hover,
+    .admin_plugins a:focus,
+    .admin_plugins a:active {
+        background-color: var(--bg-color-accent);
+    }
+
+    #config__manager fieldset {
+        color: #ffffff;
+    }
+
+    .code .kw2 {
+        color: #ffffff;
+    }
+
+    .code .re5 {
+        color: #dd1122;
+    }
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/lib/tpl/dokuwiki/fonts/pt-sans/pt-sans_regular.woff2') format('woff2');
+}
+  
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/lib/tpl/dokuwiki/fonts/pt-sans/pt-sans_italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/lib/tpl/dokuwiki/fonts/pt-sans/pt-sans_bold.woff2') format('woff2');
+}
+  
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/lib/tpl/dokuwiki/fonts/pt-sans/pt-sans_bold-italic.woff2') format('woff2');
+}
